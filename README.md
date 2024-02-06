@@ -9,13 +9,13 @@ Para comenzar a trabajar con este proyecto, asegúrese de tener instalado Node.j
 1. Clone este repositorio en su máquina local:
 
     ```bash
-    git clone <https://github.com/juanes1969/WeAreDev-backend>
+    git clone https://github.com/juanes1969/WeAreDev-backend
     ```
 
 2. Navegue al directorio del proyecto:
 
     ```bash
-    cd <carpeta a la que quiera navegar>
+    cd src
     ```
 
 3. Instale las dependencias utilizando Yarn:
