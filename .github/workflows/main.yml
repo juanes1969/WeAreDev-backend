@@ -1,0 +1,46 @@
+# name: Base Backend CI
+
+# on:
+#   push:
+#     # Sequence of patterns matched against refs/heads
+#     branches:
+#       - main # Branch to activate deploymeny flow
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [18.x] # App node versión
+#     steps:
+#       - uses: actions/checkout@v1
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: ${{ matrix.node-version }}
+#       - name: Build Docker
+#         run:
+#           # docker build --tag [CONNECTION_TAG] .
+#       - name: Login to ECR
+#         id: ecr
+#         uses: jwalton/gh-ecr-login@v1
+#         with:
+#           access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           region:
+#             # [AWS_REGION]
+#       - name: Push to ECR
+#         run:
+#           # docker tag [CONNECTION_TAG] ${{ steps.ecr.outputs.account }}.dkr.ecr.[AWS_REGION].amazonaws.com/[CONNECTION_TAG]
+#           # docker push ${{ steps.ecr.outputs.account }}.dkr.ecr.[AWS_REGION].amazonaws.com/[CONNECTION_TAG]
+#       - name: Configure AWS Credentials
+#         uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws-region:
+#             # [AWS_REGION]
+
+#       - name: Deploy to ECS
+#         run:
+#           # aws ecs update-service --region [AWS_REGION] --cluster "[CLUSTER_NAME]" --service "[SERVICE_NAME]" --task-definition "[TASK_DEFINITION_NAME]" --force-new-deployment
