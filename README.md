@@ -9,7 +9,7 @@ Para comenzar a trabajar con este proyecto, asegúrese de tener instalado Node.j
 1. Clone este repositorio en su máquina local:
 
     ```bash
-    git clone <https://github.com/juanes1969/WeAreDev-backendo>
+    git clone <https://github.com/juanes1969/WeAreDev-backend>
     ```
 
 2. Navegue al directorio del proyecto:
