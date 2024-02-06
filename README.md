@@ -38,16 +38,19 @@ Asegúrese de configurar los scripts y las opciones de compilación en el archiv
 
 La estructura del proyecto puede variar según las necesidades específicas, pero aquí se proporciona una vista general de la estructura típica de un proyecto TypeScript del lado del servidor:
 
-├── src/ # Archivos fuente TypeScript
-│ ├── controllers/ # Controladores de la lógica de negocio
-│ ├── models/ # Definiciones de modelos de datos
-│ ├── routes/ # Rutas y endpoints de la API
-│ └── index.ts # Punto de entrada principal
-├── tests/ # Tests unitarios y de integración
-├── .gitignore # Archivos y directorios ignorados por git
-├── package.json # Archivo de configuración de Yarn
-├── tsconfig.json # Archivo de configuración de TypeScript
-└── README.md # Documentación del proyecto
+
+
+	├── src/ # Archivos fuente TypeScript
+	│ ├── controllers/ # Controladores de la lógica de negocio
+	│ ├── models/ # Definiciones de modelos de datos
+	│ ├── routes/ # Rutas y endpoints de la API
+	│ └── index.ts # Punto de entrada principal
+	├── tests/ # Tests unitarios y de integración
+	├── .gitignore # Archivos y directorios ignorados por git
+	├── package.json # Archivo de configuración de Yarn
+	├── tsconfig.json # Archivo de configuración de TypeScript
+	└── README.md # Documentación del proyecto
+
 
 ## Autor
 
